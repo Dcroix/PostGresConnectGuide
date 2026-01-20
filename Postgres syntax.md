@@ -1,8 +1,8 @@
-# ![Pink Square](https://img.shields.io/badge/-%20-F6C8CC?style=for-the-badge) Useful Postgres
+# ![Pink Square](https://img.shields.io/badge/-%20-F6C8CC?style=for-the-badge) Useful Postgres Syntax
 A collection of essential PostgreSQL commands, statements, and query structures that simplify daily database operations, including creating and modifying tables, querying and filtering data, managing users and permissions, handling sequences, and performing aggregations. These syntaxes serve as practical tools for developers, analysts, and data scientists to efficiently interact with PostgreSQL databases.
 
 
-### ![Pink Square](https://img.shields.io/badge/-%20-F6C8CC?style=for-the-badge) Creation of PG Accounts:  
+### Creation of PG Accounts:  
 CREATE USER myuser WITH PASSWORD 'mypassword';  
 GRANT CONNECT ON DATABASE mydb TO myuser;  
 GRANT USAGE ON SCHEMA public TO myuser;  
@@ -66,6 +66,7 @@ ORDER BY total_cash DESC;
 
 ### - Reset a Serial Sequence after manual inserts:
 SELECT setval('coh_id_seq', (SELECT MAX(id) FROM coh));  
+
 
 
 
