@@ -1,2 +1,2 @@
 # PostGresConnectGuide
-Ultimate Guide for Establish Connection with Postgres - also the syntax that matter
+Ultimate Guide for Establishing Connection with Postgres to also include the syntax that are handy for use.
