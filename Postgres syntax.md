@@ -1,10 +1,10 @@
 # Postgres syntax
 
-Creation of PG Accounts:  
-CREATE USER myuser WITH PASSWORD 'mypassword';
-GRANT CONNECT ON DATABASE mydb TO myuser;
-GRANT USAGE ON SCHEMA public TO myuser;
-GRANT SELECT, INSERT, UPDATE, DELETE ON ALL TABLES IN SCHEMA public TO myuser;
+## Creation of PG Accounts:  
+CREATE USER myuser WITH PASSWORD 'mypassword';  
+GRANT CONNECT ON DATABASE mydb TO myuser;  
+GRANT USAGE ON SCHEMA public TO myuser;  
+GRANT SELECT, INSERT, UPDATE, DELETE ON ALL TABLES IN SCHEMA public TO myuser;  
 
 Creation of Tables
 CREATE TABLE IF NOT EXISTS TableName (
@@ -64,6 +64,7 @@ ORDER BY total_cash DESC;
 
 Reset a Serial Sequence after manual inserts:
 SELECT setval('coh_id_seq', (SELECT MAX(id) FROM coh));
+
 
 
 
