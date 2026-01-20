@@ -3,7 +3,7 @@ A collection of essential PostgreSQL commands, statements, and query structures 
 
 
 
-### Creation of PG Accounts:  
+### - Creation of PG Accounts:  
 CREATE USER myuser WITH PASSWORD 'mypassword';  
 GRANT CONNECT ON DATABASE mydb TO myuser;  
 GRANT USAGE ON SCHEMA public TO myuser;  
@@ -67,6 +67,7 @@ ORDER BY total_cash DESC;
 
 ### Reset a Serial Sequence after manual inserts:
 SELECT setval('coh_id_seq', (SELECT MAX(id) FROM coh));  
+
 
 
 
