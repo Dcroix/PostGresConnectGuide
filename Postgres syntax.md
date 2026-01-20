@@ -1,4 +1,4 @@
-# Postgres syntax
+# Useful Postgres syntax
 
 ## Creation of PG Accounts:  
 CREATE USER myuser WITH PASSWORD 'mypassword';  
@@ -6,13 +6,13 @@ GRANT CONNECT ON DATABASE mydb TO myuser;
 GRANT USAGE ON SCHEMA public TO myuser;  
 GRANT SELECT, INSERT, UPDATE, DELETE ON ALL TABLES IN SCHEMA public TO myuser;  
 
-Creation of Tables
-CREATE TABLE IF NOT EXISTS TableName (
-    RecordID SERIAL PRIMARY KEY, # Set to serial means auto-sequencing
-	FieldNameA INT NOT NULL,
-	FieldNameB VARCHAR(15) NOT NULL,
-	FieldNameC DATE NOT NULL
-) #Note that Date format is YYYY-MM-DD
+# Creation of Tables
+CREATE TABLE IF NOT EXISTS TableName (  
+    RecordID SERIAL PRIMARY KEY, # Set to serial means auto-sequencing  
+	FieldNameA INT NOT NULL,  
+	FieldNameB VARCHAR(15) NOT NULL,  
+	FieldNameC DATE NOT NULL  
+) #Note that Date format is YYYY-MM-DD  
 
 Describe Table Structure
 SELECT column_name, data_type, is_nullable
@@ -64,6 +64,7 @@ ORDER BY total_cash DESC;
 
 Reset a Serial Sequence after manual inserts:
 SELECT setval('coh_id_seq', (SELECT MAX(id) FROM coh));
+
 
 
 
