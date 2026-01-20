@@ -12,9 +12,10 @@ con <- dbConnect( # Establish Database Connection
 )
 
 # Read the table into a data frame
-coh_data <- dbReadTable(con, "coh") # Read table and store on said variable
+coh_data <- dbReadTable(con, "table_name") # Read table and store on said variable
 
 # View the first few rows
 head(coh_data) 
 # Database Disconnect
 dbDisconnect(con)
+
