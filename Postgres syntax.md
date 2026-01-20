@@ -1,4 +1,5 @@
 # Useful Postgres syntax
+A collection of essential PostgreSQL commands, statements, and query structures that simplify daily database operations, including creating and modifying tables, querying and filtering data, managing users and permissions, handling sequences, and performing aggregations. These syntaxes serve as practical tools for developers, analysts, and data scientists to efficiently interact with PostgreSQL databases.
 
 ## Creation of PG Accounts:  
 CREATE USER myuser WITH PASSWORD 'mypassword';  
@@ -64,6 +65,7 @@ ORDER BY total_cash DESC;
 
 Reset a Serial Sequence after manual inserts:
 SELECT setval('coh_id_seq', (SELECT MAX(id) FROM coh));
+
 
 
 
