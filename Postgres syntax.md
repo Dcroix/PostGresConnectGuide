@@ -67,6 +67,13 @@ ORDER BY total_cash DESC;
 ### - Reset a Serial Sequence after manual inserts:
 SELECT setval('coh_id_seq', (SELECT MAX(id) FROM coh));  
 
+### - Check Duplicates
+SELECT sex, children, COUNT(*)
+FROM credapp_data1
+GROUP BY sex, children
+HAVING COUNT(*) > 1
+
+
 
 
 
