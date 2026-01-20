@@ -46,27 +46,28 @@ CREATE TABLE dogs (
     dog_age INT NOT NULL  
 );  
 
-Alter table / column
--- Change column type
-ALTER TABLE coh
-ALTER COLUMN cash TYPE NUMERIC(12,2)
-USING cash::numeric;
+### Alter table / column
+#### Change column type
+ALTER TABLE coh  
+ALTER COLUMN cash TYPE NUMERIC(12,2)  
+USING cash::numeric;  
 
--- Add a new column
-ALTER TABLE coh
-ADD COLUMN notes TEXT;
+#### Add a new column
+ALTER TABLE coh  
+ADD COLUMN notes TEXT;  
 
-Count Rows
-SELECT COUNT(*) FROM coh;
+### Count Rows
+SELECT COUNT(*) FROM coh;  
 
-Aggregate Example
-SELECT branch, SUM(cash) AS total_cash
-FROM coh
-GROUP BY branch
-ORDER BY total_cash DESC;
+### Aggregate Example
+SELECT branch, SUM(cash) AS total_cash  
+FROM coh  
+GROUP BY branch  
+ORDER BY total_cash DESC;  
 
-Reset a Serial Sequence after manual inserts:
-SELECT setval('coh_id_seq', (SELECT MAX(id) FROM coh));
+### Reset a Serial Sequence after manual inserts:
+SELECT setval('coh_id_seq', (SELECT MAX(id) FROM coh));  
+
 
 
 
