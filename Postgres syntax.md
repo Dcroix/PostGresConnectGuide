@@ -1,13 +1,15 @@
 # Useful Postgres syntax
 A collection of essential PostgreSQL commands, statements, and query structures that simplify daily database operations, including creating and modifying tables, querying and filtering data, managing users and permissions, handling sequences, and performing aggregations. These syntaxes serve as practical tools for developers, analysts, and data scientists to efficiently interact with PostgreSQL databases.
 
-## Creation of PG Accounts:  
+
+
+### Creation of PG Accounts:  
 CREATE USER myuser WITH PASSWORD 'mypassword';  
 GRANT CONNECT ON DATABASE mydb TO myuser;  
 GRANT USAGE ON SCHEMA public TO myuser;  
 GRANT SELECT, INSERT, UPDATE, DELETE ON ALL TABLES IN SCHEMA public TO myuser;  
 
-# Creation of Tables
+### Creation of Tables
 CREATE TABLE IF NOT EXISTS TableName (  
     RecordID SERIAL PRIMARY KEY, # Set to serial means auto-sequencing  
 	FieldNameA INT NOT NULL,  
@@ -15,34 +17,34 @@ CREATE TABLE IF NOT EXISTS TableName (
 	FieldNameC DATE NOT NULL  
 ) #Note that Date format is YYYY-MM-DD  
 
-Describe Table Structure
-SELECT column_name, data_type, is_nullable
-FROM information_schema.columns
-WHERE table_name='coh';
+### Describe Table Structure
+SELECT column_name, data_type, is_nullable  
+FROM information_schema.columns  
+WHERE table_name='coh';  
 
-Select Data from Table
-SELECT * FROM coh;
-SELECT branch, cash FROM coh WHERE cash > 1000 ORDER BY cash DESC;
+### Select Data from Table
+SELECT * FROM coh;  
+SELECT branch, cash FROM coh WHERE cash > 1000 ORDER BY cash DESC;  
 
-Insert data into a table
-INSERT INTO coh (branch, days, cash)
-VALUES ('NY', '2025-03-01', 1250.50);
+### Insert data into a table
+INSERT INTO coh (branch, days, cash)  
+VALUES ('NY', '2025-03-01', 1250.50);  
 
-Update Existing Rows
-UPDATE coh
-SET cash = cash + 100
-WHERE branch = 'NY';
+### Update Existing Rows
+UPDATE coh  
+SET cash = cash + 100  
+WHERE branch = 'NY';  
 
-Delete rows
-DELETE FROM coh
-WHERE branch = 'LA';
+### Delete rows
+DELETE FROM coh  
+WHERE branch = 'LA';  
 
-Create a new table
-CREATE TABLE dogs (
-    dog_id SERIAL PRIMARY KEY,
-    dog_name VARCHAR(30) NOT NULL,
-    dog_age INT NOT NULL
-);
+### Create a new table
+CREATE TABLE dogs (  
+    dog_id SERIAL PRIMARY KEY,  
+    dog_name VARCHAR(30) NOT NULL,  
+    dog_age INT NOT NULL  
+);  
 
 Alter table / column
 -- Change column type
@@ -65,6 +67,7 @@ ORDER BY total_cash DESC;
 
 Reset a Serial Sequence after manual inserts:
 SELECT setval('coh_id_seq', (SELECT MAX(id) FROM coh));
+
 
 
 
