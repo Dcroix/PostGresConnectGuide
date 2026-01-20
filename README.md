@@ -1,5 +1,6 @@
 # PostGresConnectGuide
-Ultimate Guide for Establishing Connection with Postgres to also include the syntax that are handy for use.
+Ultimate Guide for Establishing Connection with Postgres to also include the syntax that are handy for use.  
+Especially made for our Data Engineers handling our Postgres Database.  
 
 - Read_SQL_Data_R
 This file presents how to connect your postgres DB to your existing R application.
