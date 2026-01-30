@@ -8,7 +8,7 @@ This file presents how to connect your postgres DB to your existing R applicatio
 - Easy File Import to Postgres DB  
 This notebook presents how to easily import a csv file into a new table in postgres.  
 Very useful when you have many columns. After importing, alter data types accordingly.  
-This is better than creating a table and manually typing each column.  
+This is better than creating a table and manually typing each column. Perfect for cloud DB connection. However, we found out that this only works on DB connect without SSH. Will post code for DB connect with SSH soon. 
 
 - Postgres Syntax Guide  
 A file with a listing of useful syntax for everyday postgres activities.
